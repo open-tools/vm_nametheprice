@@ -1,0 +1,6 @@
+.svn
+*~
+cache
+*.kate-swp
+logs
+tmp

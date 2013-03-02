@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<install version="1.5" type="plugin" group="vmcustom" method="upgrade">
+    <name>VMCUSTOM_SETPRICE</name>
+    <creationDate>2013-03-02</creationDate>
+    <author>Reinhold Kainhofer</author>
+    <authorUrl>http://www.kainhofer.com/</authorUrl>
+    <copyright>Copyright (C) 2013 Reinhold Kainhofer. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl.html GNU/GPL v3+</license>
+    <version>0.1.0</version>
+    <description>VMCUSTOM_SETPRICE_DESC</description>
+    <files>
+        <filename plugin="set_price">set_price.php</filename>
+        <filename>set_price.script.php</filename>
+        <folder>language</folder>
+        <filename>index.html</filename>
+    </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_vmcustom_set_price.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_vmcustom_set_price.sys.ini</language>
+    </languages>
+    <scriptfile>set_price.script.php</scriptfile>
+    <params addpath="/administrator/components/com_virtuemart/elements">
+        <param type="vmjpluginwarning" />
+    </params>
+</install>
