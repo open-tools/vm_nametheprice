@@ -1,7 +1,7 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
 
-class plgVmCustomDownloads_for_SaleInstallerScript
+class plgVmCustomDonationInstallerScript
 {
     /**
      * Constructor

@@ -4,7 +4,7 @@
 //vmdebug('$this',$viewData[0]);
 	//if ($field->custom_price_by_letter) $class='vmcustom-textinput';?>
 
-	<input class="<?php echo $class ?>" type="text" value="" name="customPlugin[<?php echo $viewData[0]->virtuemart_customfield_id ?>][<?php echo $this->_name?>][customprice]"><br />
+	<input class="<?php echo $class ?>" type="text" value="" size="4" name="customPlugin[<?php echo $viewData[0]->virtuemart_customfield_id ?>][<?php echo $this->_name?>][customprice]"><?php echo CurrencyDisplay::getInstance ()->getSymbol(); ?><br />
 <?php
 	// preventing 2 x load javascript
 	static $textinputjs;

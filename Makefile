@@ -1,12 +1,12 @@
 BASE=donation
 PLUGINTYPE=vmcustom
-VERSION=0.1
+VERSION=1.0
 
 PLUGINFILES=$(BASE).php $(BASE).script.php $(BASE).xml index.html
 
 TRANSLATIONS=$(call wildcard,language/*/*.plg_$(PLUGINTYPE)_$(BASE).*ini) 
 INDEXFILES=language/index.html $(call wildcard,language/*/index.html)
-TMPLFILES=$(call wildcard,$(BASE)/tmpl/*.php) 
+TMPLFILES=$(call wildcard,$(BASE)/tmpl/*.php) $(call wildcard,$(BASE)/tmpl/index.html) $(call wildcard,$(BASE)/index.html)  
 ASSETS=
 ZIPFILE=plg_$(PLUGINTYPE)_$(BASE)_v$(VERSION).zip
 

@@ -19,8 +19,8 @@ if (!class_exists('vmCustomPlugin')) require(JPATH_VM_PLUGINS . DS . 'vmcustompl
 // if(!class_exists('VmTable'))require(JPATH_VM_ADMINISTRATOR.DS.'helpers'.DS.'vmtable.php');
 
 if (JVM_VERSION === 2) {
-    if (!defined('VMDONATION_PLUGINPATH')) define('VMDONATION_PLUGINPATH', JPATH_SITE.DS.'plugins'.DS.'vmcustom'.DS.'set_price');
-    if (!defined('VMDONATION_PLUGINWEBROOT')) define('VMDONATION_PLUGINWEBROOT', 'plugins/vmcustom/set_price');
+    if (!defined('VMDONATION_PLUGINPATH')) define('VMDONATION_PLUGINPATH', JPATH_SITE.DS.'plugins'.DS.'vmcustom'.DS.'donation');
+    if (!defined('VMDONATION_PLUGINWEBROOT')) define('VMDONATION_PLUGINWEBROOT', 'plugins/vmcustom/donation');
 } else {
     if (!defined('VMDONATION_PLUGINPATH')) define('VMDONATION_PLUGINPATH', JPATH_SITE.DS.'plugins'.DS.'vmcustom');
     if (!defined('VMDONATION_PLUGINWEBROOT')) define('VMDONATION_PLUGINWEBROOT', 'plugins/vmcustom');
@@ -79,7 +79,8 @@ class plgVmCustomDonation extends vmCustomPlugin {
 
 		foreach($plgParam as $k => $item){
 			if(!empty($item['customprice']) && ($product->productCustom->virtuemart_customfield_id==$k)){
-				$html .='<span>'.JText::_($product->productCustom->custom_title).' '.$item['customprice'].'</span>';
+				$currency = CurrencyDisplay::getInstance ();
+				$html .='<span>'.JText::_($product->productCustom->custom_title).' '.$currency->priceDisplay($item['customprice']).'</span>';
 			}
 		 }
 		return true;
