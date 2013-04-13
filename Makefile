@@ -1,6 +1,6 @@
 BASE=donation
 PLUGINTYPE=vmcustom
-VERSION=1.0
+VERSION=1.0.1
 
 PLUGINFILES=$(BASE).php $(BASE).script.php $(BASE).xml index.html
 

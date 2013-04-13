@@ -1,4 +1,16 @@
 <?php
+/**------------------------------------------------------------------------
+# donation.script.php - VirtueMart 2 plugin for donations, installation script
+# ------------------------------------------------------------------------
+# @author    Reinhold Kainhofer, The Open Tools Association
+# @copyright Copyright (C) 2013 Reinhold Kainhofer, open-tools.net. All Rights Reserved.
+# @license - http://www.gnu.org/licenses/gpl.html GNU/GPL
+* @package VirtueMart
+* @subpackage vmcustom
+# Websites: http://www.open-tools.net/
+# Technical Support:  Forum - http://www.open-tools.net/forum/index.html
+-------------------------------------------------------------------------*/
+// no direct access
 defined('_JEXEC') or die('Restricted access');
 
 class plgVmCustomDonationInstallerScript

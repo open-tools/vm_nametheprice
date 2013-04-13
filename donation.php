@@ -1,20 +1,18 @@
 <?php
-defined('_JEXEC') or 	die( 'Direct Access to ' . basename( __FILE__ ) . ' is not allowed.' ) ;
-/**
- * A custom field plugin for downloadable files
- * @author Reinhold Kainhofer
- * @package VirtueMart
- * @subpackage vmcustom
- * @copyright Copyright (C) 2013 Reinhold Kainhofer - All rights reserved.
- * @license http://www.gnu.org/copyleft/gpl.html GNU/GPL, see LICENSE.php
- * VirtueMart is free software. This version may have been modified pursuant
- * to the GNU General Public License, and as distributed it includes or
- * is derivative of works licensed under the GNU General Public License or
- * other free or open source software licenses.
- * See /administrator/components/com_virtuemart/COPYRIGHT.php for copyright notices and details.
- *
- * http://kainhofer.com
- */
+/**------------------------------------------------------------------------
+# donation.php - VirtueMart 2 plugin for donations
+# ------------------------------------------------------------------------
+# @author    Reinhold Kainhofer, The Open Tools Association
+# @copyright Copyright (C) 2013 Reinhold Kainhofer, open-tools.net. All Rights Reserved.
+# @license - http://www.gnu.org/licenses/gpl.html GNU/GPL
+* @package VirtueMart
+* @subpackage vmcustom
+# Websites: http://www.open-tools.net/
+# Technical Support:  Forum - http://www.open-tools.net/forum/index.html
+-------------------------------------------------------------------------*/
+// no direct access
+defined('_JEXEC') or die( 'Direct Access to ' . basename( __FILE__ ) . ' is not allowed.' ) ;
+
 if (!class_exists('vmCustomPlugin')) require(JPATH_VM_PLUGINS . DS . 'vmcustomplugin.php');
 // if(!class_exists('VmTable'))require(JPATH_VM_ADMINISTRATOR.DS.'helpers'.DS.'vmtable.php');
 
@@ -42,12 +40,6 @@ class plgVmCustomDonation extends vmCustomPlugin {
 	 */
 	function plgVmOnProductEdit($field, $product_id, &$row,&$retValue) {
 		if ($field->custom_element != $this->_name) return '';
-// 		$this->parseCustomParams($field);
-// 		$html = '';
-// 
-// 		$retValue .= $html;
-// 		$row++;
-// 		return true ;
 	}
 	
 	/**
@@ -151,25 +143,6 @@ class plgVmCustomDonation extends vmCustomPlugin {
 	function plgVmOnSelfCallFE($type,$name,&$render) {
 		$render->html = '';
 	}
-	
-    
-
-// 	/**
-// 	 * Create the database table for this plugin.
-// 	 */
-// 	public function getVmPluginCreateTableSQL() {
-// 		return $this->createTableSQL('Downloads for Sale tracking');
-// 	}
-// 
-// 	function getTableSQLFields() {
-// 		$SQLfields = array(
-// 		  'id' => 'int(1) UNSIGNED NOT NULL AUTO_INCREMENT',
-// 		  'virtuemart_customfield_id' => 'int(11) UNSIGNED NOT NULL DEFAULT 0',
-// 		  'virtuemart_order_item_id' => 'int(11) UNSIGNED NULL DEFAULT 0',
-// 		  'downloaded' => 'int(11) UNSIGNED NOT NULL DEFAULT 0',
-// 		);
-// 		return $SQLfields;
-// 	}
 
 }
 

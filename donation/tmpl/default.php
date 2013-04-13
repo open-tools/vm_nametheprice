@@ -1,8 +1,17 @@
 <?php
-	defined('_JEXEC') or die();
+/*------------------------------------------------------------------------
+# default.php - template for the donation input box
+# ------------------------------------------------------------------------
+# author    Reinhold Kainhofer, The Open Tools Association
+# copyright Copyright (C) 2013 open-tools.net. All Rights Reserved.
+# @license - http://www.gnu.org/licenses/gpl.html GNU/GPL
+# Websites: http://www.open-tools.net/
+# Technical Support:  Forum - http://www.open-tools.net/forum/index.html
+-------------------------------------------------------------------------*/
+// no direct access
+defined( '_JEXEC' ) or die( 'Restricted access' );
+
 	$class='vmcustom-settext';
-//vmdebug('$this',$viewData[0]);
-	//if ($field->custom_price_by_letter) $class='vmcustom-textinput';?>
 
 	<input class="<?php echo $class ?>" type="text" value="" size="4" name="customPlugin[<?php echo $viewData[0]->virtuemart_customfield_id ?>][<?php echo $this->_name?>][customprice]"><?php echo CurrencyDisplay::getInstance ()->getSymbol(); ?><br />
 <?php
