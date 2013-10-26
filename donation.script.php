@@ -12,6 +12,12 @@
 -------------------------------------------------------------------------*/
 // no direct access
 defined('_JEXEC') or die('Restricted access');
+/**
+ * Installation script for the plugin
+ *
+ * @copyright Copyright (C) 2013 Reinhold Kainhofer, office@open-tools.net
+ * @license GPL v3+,  http://www.gnu.org/copyleft/gpl.html 
+ */
 
 class plgVmCustomDonationInstallerScript
 {

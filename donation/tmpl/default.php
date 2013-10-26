@@ -11,7 +11,7 @@
 // no direct access
 defined( '_JEXEC' ) or die( 'Restricted access' );
 
-	$class='vmcustom-settext';
+	$class='vmcustom-settext'; ?>
 
 	<input class="<?php echo $class ?>" type="text" value="" size="4" name="customPlugin[<?php echo $viewData[0]->virtuemart_customfield_id ?>][<?php echo $this->_name?>][customprice]"><?php echo CurrencyDisplay::getInstance ()->getSymbol(); ?><br />
 <?php

@@ -6,7 +6,7 @@
     <authorUrl>http://www.open-tools.net/</authorUrl>
     <copyright>Copyright (C) 2013 Reinhold Kainhofer. All rights reserved.</copyright>
     <license>http://www.gnu.org/licenses/gpl.html GNU/GPL v3+</license>
-    <version>1.0.1</version>
+    <version>1.1.0</version>
     <description>VMCUSTOM_DONATION_DESC</description>
     <files>
         <filename plugin="donation">donation.php</filename>

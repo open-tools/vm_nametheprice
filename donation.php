@@ -29,10 +29,11 @@ class plgVmCustomDonation extends vmCustomPlugin {
 	function __construct(& $subject, $config) {
 		parent::__construct($subject, $config);
 		$varsToPush = array(
+			'min_amount'=>array('0.0', 'char'),
+			'max_amount'=>array('', 'char'),
 		);
 		$this->setConfigParameterable('custom_params',$varsToPush);
 	}
-
 
 	/**
 	 * @see Form displayed in the product edit page in the BE, configure the download file
@@ -40,6 +41,20 @@ class plgVmCustomDonation extends vmCustomPlugin {
 	 */
 	function plgVmOnProductEdit($field, $product_id, &$row,&$retValue) {
 		if ($field->custom_element != $this->_name) return '';
+		
+		$this->parseCustomParams($field);
+		$html ='
+			<fieldset>
+				<legend>'. JText::_('VMCUSTOM_DONATION') .'</legend>
+				<table class="admintable">
+					'.VmHTML::row('input','VMCUSTOM_DONATION_MIN','custom_param['.$row.'][min_amount]',$field->min_amount).
+					VmHTML::row('input','VMCUSTOM_DONATION_MAX','custom_param['.$row.'][max_amount]',$field->max_amount).
+					'<tr>
+				</table>
+			</fieldset>';
+		$retValue .= $html;
+		$row++;
+		return true ;
 	}
 	
 	/**
@@ -125,7 +140,18 @@ class plgVmCustomDonation extends vmCustomPlugin {
 	public function plgVmCalculateCustomVariant($product, &$productCustomsPrice, $selected){
 		if ($productCustomsPrice->custom_element !==$this->_name) return ;
 		$customVariant = $this->getCustomVariant($product, $productCustomsPrice, $selected);
+		// TODO: Implement bounds for "donation": max/min value.
 		if (!empty($customVariant['customprice'])) {
+			if (!empty($productCustomsPrice->min_amount) && ($customVariant['customprice']<$productCustomsPrice->min_amount)) {
+				$customVariant['customprice'] = $productCustomsPrice->min_amount;
+			}
+			if (!empty($productCustomsPrice->max_amount) && ($customVariant['customprice']<$productCustomsPrice->max_amount)) {
+				$customVariant['customprice'] = $productCustomsPrice->max_amount;
+			}
+			
+// 			if ($customVariant['customprice']<0) {
+// 				$customVariant['customprice'] = 0;
+// 			}
 			$productCustomsPrice->custom_price = $customVariant['customprice'];
 		} else {
 			$productCustomsPrice->custom_price = 0.0;
