@@ -1,9 +1,9 @@
 <?php
 /**------------------------------------------------------------------------
-# donation.script.php - VirtueMart 2 plugin for donations, installation script
+# donation.script.php - VirtueMart 2 and 3 plugin to let customers determine the price of a product, installation script
 # ------------------------------------------------------------------------
 # @author    Reinhold Kainhofer, The Open Tools Association
-# @copyright Copyright (C) 2013 Reinhold Kainhofer, open-tools.net. All Rights Reserved.
+# @copyright Copyright (C) 2013-2014 Reinhold Kainhofer, open-tools.net. All Rights Reserved.
 # @license - http://www.gnu.org/licenses/gpl.html GNU/GPL
 * @package VirtueMart
 * @subpackage vmcustom
@@ -15,11 +15,11 @@ defined('_JEXEC') or die('Restricted access');
 /**
  * Installation script for the plugin
  *
- * @copyright Copyright (C) 2013 Reinhold Kainhofer, office@open-tools.net
+ * @copyright Copyright (C) 2013-2014 Reinhold Kainhofer, office@open-tools.net
  * @license GPL v3+,  http://www.gnu.org/copyleft/gpl.html 
  */
 
-class plgVmCustomDonationInstallerScript
+class plgVmCustomNameThePriceInstallerScript
 {
     /**
      * Constructor
@@ -59,7 +59,7 @@ class plgVmCustomDonationInstallerScript
     {
         // enabling plugin
         $db =& JFactory::getDBO();
-        $db->setQuery('update #__extensions set enabled = 1 where type = "plugin" and element = "donation" and folder = "vmcustom"');
+        $db->setQuery('update #__extensions set enabled = 1 where type = "plugin" and element = "nametheprice" and folder = "vmcustom"');
         $db->query();
         
         return True;

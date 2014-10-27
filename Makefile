@@ -1,6 +1,7 @@
-BASE=donation
+BASE=nametheprice
 PLUGINTYPE=vmcustom
-VERSION=1.1.0
+VERSION=1.2
+FILEBASE=opentools_vm2
 
 PLUGINFILES=$(BASE).php $(BASE).script.php $(BASE).xml index.html
 
@@ -8,7 +9,7 @@ TRANSLATIONS=$(call wildcard,language/*/*.plg_$(PLUGINTYPE)_$(BASE).*ini)
 INDEXFILES=language/index.html $(call wildcard,language/*/index.html)
 TMPLFILES=$(call wildcard,$(BASE)/tmpl/*.php) $(call wildcard,$(BASE)/tmpl/index.html) $(call wildcard,$(BASE)/index.html)  
 ASSETS=
-ZIPFILE=plg_$(PLUGINTYPE)_$(BASE)_v$(VERSION).zip
+ZIPFILE=plg_$(FILEBASE)_$(BASE)_v$(VERSION).zip
 
 
 zip: $(PLUGINFILES) $(TRANSLATIONS) $(ELEMENTS) $(INDEXFILES) $(TMPLFILES) $(ASSETS)

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="2.5" type="plugin" group="vmcustom" method="upgrade">
+    <name>VMCUSTOM_NAMETHEPRICE</name>
+    <creationDate>2013-03-02</creationDate>
+    <author>Reinhold Kainhofer</author>
+    <authorUrl>http://www.open-tools.net/</authorUrl>
+    <copyright>Copyright (C) 2013-2014 Reinhold Kainhofer. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl.html GNU/GPL v3+</license>
+    <version>1.2</version>
+    <description>VMCUSTOM_NAMETHEPRICE_DESC</description>
+    <files>
+        <filename plugin="nametheprice">nametheprice.php</filename>
+        <filename>nametheprice.script.php</filename>
+        <folder>language</folder>
+        <folder>nametheprice</folder>
+        <filename>index.html</filename>
+    </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_vmcustom_nametheprice.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_vmcustom_nametheprice.sys.ini</language>
+        <language tag="de-DE">de-DE/de-DE.plg_vmcustom_nametheprice.ini</language>
+        <language tag="de-DE">de-DE/de-DE.plg_vmcustom_nametheprice.sys.ini</language>
+    </languages>
+    <scriptfile>nametheprice.script.php</scriptfile>
+    <vmconfig>
+    </vmconfig>
+    <params addpath="/administrator/components/com_virtuemart/elements">
+        <param type="vmjpluginwarning" />
+    </params>
+</extension>
