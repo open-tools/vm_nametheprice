@@ -58,7 +58,7 @@ class plgVmCustomNameThePriceInstallerScript
     public function install(JAdapterInstance $adapter)
     {
         // enabling plugin
-        $db =& JFactory::getDBO();
+        $db = JFactory::getDBO();
         $db->setQuery('update #__extensions set enabled = 1 where type = "plugin" and element = "nametheprice" and folder = "vmcustom"');
         $db->query();
         
