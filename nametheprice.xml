@@ -6,7 +6,7 @@
     <authorUrl>http://www.open-tools.net/</authorUrl>
     <copyright>Copyright (C) 2013-2014 Reinhold Kainhofer. All rights reserved.</copyright>
     <license>http://www.gnu.org/licenses/gpl.html GNU/GPL v3+</license>
-    <version>1.3</version>
+    <version>1.4</version>
     <description>VMCUSTOM_NAMETHEPRICE_DESC</description>
     <files>
         <filename plugin="nametheprice">nametheprice.php</filename>
