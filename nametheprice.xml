@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <extension version="2.5" type="plugin" group="vmcustom" method="upgrade">
     <name>VMCUSTOM_NAMETHEPRICE</name>
-    <creationDate>2013-03-02</creationDate>
+    <creationDate>2016-01-01</creationDate>
     <author>Reinhold Kainhofer</author>
     <authorUrl>http://www.open-tools.net/</authorUrl>
     <copyright>Copyright (C) 2013-2014 Reinhold Kainhofer. All rights reserved.</copyright>
     <license>http://www.gnu.org/licenses/gpl.html GNU/GPL v3+</license>
-    <version>1.4</version>
+    <version>1.5</version>
     <description>VMCUSTOM_NAMETHEPRICE_DESC</description>
     <files>
         <filename plugin="nametheprice">nametheprice.php</filename>
@@ -27,4 +27,9 @@
     <params addpath="/administrator/components/com_virtuemart/elements">
         <param type="vmjpluginwarning" />
     </params>
+	
+	<updateservers>
+		<server type="extension" name="VM Name the Price Updates"><![CDATA[http://open-tools.net/UpdateServer/index.php?package=Joomla&amp;extension=NameThePrice&amp;file=extension.xml]]></server>
+	</updateservers>
+
 </extension>

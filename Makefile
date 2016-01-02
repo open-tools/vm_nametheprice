@@ -1,6 +1,6 @@
 BASE=nametheprice
 PLUGINTYPE=vmcustom
-VERSION=1.4
+VERSION=1.5
 FILEBASE=opentools_vm
 
 PLUGINFILES=$(BASE).php $(BASE).script.php $(BASE).xml index.html
